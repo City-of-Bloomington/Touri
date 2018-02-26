@@ -15,9 +15,15 @@ Route::get('/admin', 'ToursController@index');
 
 Route::get('/admin/create', 'ToursController@create');
 
-Route::post('tours', 'ToursController@store');
+Route::post('/tours', 'ToursController@store');
 
-Route::get('/admin/{tour}', 'ToursController@show');
+Route::get('/admin/tours/{tour}', 'ToursController@show');
+
+Route::get('/admin/{tour}/edit', 'ToursController@edit');
+
+Route::put('/tours/{tour}', 'ToursController@update');
+
+Route::delete('/tours/{tour}', 'ToursController@destroy');
 
 Route::post('/admin/{tour}/pois', 'PoisController@store');
 
@@ -26,7 +32,6 @@ Route::get('/', 'TourUsersController@index');
 Route::get('/feedback', 'TourUsersController@feedback');
 
 Route::get('/take_tour', 'TakeController@index');
-
 // controller => TourController
 
 // eloquent model => Tour

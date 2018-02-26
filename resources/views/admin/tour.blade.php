@@ -1,15 +1,11 @@
 <div class="blog-post">
 
     <h2 class="blog-post-title">
+      <a href="/admin/tours/{{ $tour->id }}">
 
-      <a href="/tours/{{ $tour->id }}">
-
-        {{ $tour->name }} <br>
-
-      </a>
+        {{ $tour->name }}</a> 
 
     </h2>
-
 
       <p class="blog-post-meta">
 
@@ -17,10 +13,10 @@
 
       </p>
 
-      Description: {{ $tour->description }}
+      <b>Description:</b> {{ $tour->description }}
 
-      <p>Nodes: {{ $tour->nodes }}</p>
-      <p>Distance: {{ $tour->total_distance }}</p>
-      <p>Walk time: {{ $tour->walk_time }}</p>
+      <p><b>Number of Nodes:</b> {{ $tour->nodes }}</p>
+      <p><b>Distance:</b> {{ $tour->total_distance }} mi</p>
+      <p><b>Walk time:</b> {{ $tour->walk_time }} min</p>
 
 </div>

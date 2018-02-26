@@ -1,5 +1,6 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <img class='logo' src="https://www.cfbmc.org/wp-content/uploads/2012/03/city_of_bloomington_logo.jpg" alt="logo">
         <a class="navbar-brand" href="/">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -10,10 +11,10 @@
               <a class="nav-link" href="/take_tour">Tours<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/admin/create">Admin<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="feedback">Feedback<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="feedback">Feedback<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/admin/create">Create Tour<span class="sr-only">(current)</span></a>
             </li>
             <!--
             <li class="nav-item active">
