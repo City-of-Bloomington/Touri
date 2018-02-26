@@ -1,6 +1,6 @@
 <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="https://bloximages.newyork1.vip.townnews.com/heraldtimesonline.com/content/tncms/assets/v3/editorial/2/32/2323c3be-e3cf-11e6-81a6-6ba8c83362a7/52727193bab56.image.jpg" alt="Card image cap">
+                <img class="card-img-top" src= "{{$tour->img_url}}">
                 <div class="card-body">
                   <p class="card-text">
                     <b>
@@ -10,11 +10,14 @@
                   <p> {{ $tour->description}} </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Tour</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                      <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.location.href='https://api.mapbox.com/styles/v1/wbollo/cj86m235l2odx2qqu0c0b53aj.html?title=true&access_token=pk.eyJ1Ijoid2JvbGxvIiwiYSI6ImNqNzU3Zm94dDE1cnczMnBpd2UyMTkwMDEifQ.sRkigyMwT362OztRCDDpSA#16.2/39.172828/-86.531586'" /> 
+                      Begin Tour
+                      </button>
+                      <!---<button type="button" class="btn btn-sm btn-outline-secondary">{{ $tour->total_distance}} mi</button>-->
                     </div>
                     <small class="text-muted">
-                      {{ $tour->walk_time }} min
+                      Time: {{ $tour->walk_time }} mins <br>
+                      Length: {{ $tour->total_distance}} mi
                     </small>
                   </div>
                 </div>

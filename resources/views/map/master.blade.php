@@ -23,34 +23,11 @@
 @include ('layouts.nav')
 
     <main role="main">
-    
-  <div id='map' style='width: auto; height: 300px;'></div>
-
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZWRyd2luOTYiLCJhIjoiY2oxZTRjem5zMDAwMjMzbzV3anh0MTBrNCJ9.ItTuwAZyoOY5yBcFyx0HCQ';
-    var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10',
-    center: [-86.534359, 39.1637],
-    zoom: 12
-    });
-    map.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: {
-        enableHighAccuracy: true
-    },
-    trackUserLocation: true
-    }));
 
 
 
-  </script>
 
-
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="album py-5 bg-light">
+        <div class="album py-5 bg-light">
         <div class="container">
 
         <!-- Three columns of text below the carousel -->
