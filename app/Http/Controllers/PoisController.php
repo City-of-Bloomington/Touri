@@ -9,7 +9,7 @@ class PoisController extends Controller
 {
     public function store(Tour $tour)
     {
-    	$this->validate(request(), ['description'=>'required|min:10']);
+    	$this->validate(request(), ['description'=>'required|min:5']);
 
     	$tour->addPoi(request('description'));
     	/*Poi::create([

@@ -23,9 +23,7 @@
 @include ('layouts.nav')
 
     <main role="main">
-    
   <div id='map' style='width: auto; height: 300px;'></div>
-
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiZWRyd2luOTYiLCJhIjoiY2oxZTRjem5zMDAwMjMzbzV3anh0MTBrNCJ9.ItTuwAZyoOY5yBcFyx0HCQ';
     var map = new mapboxgl.Map({
@@ -40,9 +38,6 @@
     },
     trackUserLocation: true
     }));
-
-
-
   </script>
 
 

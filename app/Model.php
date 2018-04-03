@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 
 class Model extends Eloquent
 {
-    protected $guarded = [];
+    protected $fillable = ['name','description', 'nodes', 'total_distance', 'walk_time'];
 }

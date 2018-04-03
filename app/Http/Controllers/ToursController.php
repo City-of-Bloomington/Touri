@@ -13,20 +13,20 @@ class ToursController extends Controller
     {
         $tours = Tour::latest()->get();
 
-        return view('admin.index', compact('tours'));
+    	return view('admin.index', compact('tours'));
     }
 
     public function show(Tour $tour)
 
     {
 
-        return view('admin.show', compact('tour'));
+    	return view('admin.show', compact('tour'));
     }
 
     public function create()
     {
 
-        return view('admin.create');
+    	return view('admin.create');
     }
 
     public function edit(Tour $tour)
@@ -48,20 +48,20 @@ class ToursController extends Controller
 
         ]);
 
-        //Create a new blog using the request data
-        //$blog = new Blog;
+    	//Create a new blog using the request data
+    	//$blog = new Blog;
 
-        //$blog->title = request('title');
-        //$blog->body = request('body');
+    	//$blog->title = request('title');
+    	//$blog->body = request('body');
 
-        //Save it to the database
-        //$blog->save();
+    	//Save it to the database
+    	//$blog->save();
 
-        Tour::create(request(['name', 'description','nodes','total_distance','walk_time']));
+    	Tour::create(request(['name', 'description','nodes','total_distance','walk_time']));
 
 
-        //And then redirect to the home page
-        return redirect('/admin');
+    	//And then redirect to the home page
+    	return redirect('/admin');
     }
 
     public function update(Request $request, $id)

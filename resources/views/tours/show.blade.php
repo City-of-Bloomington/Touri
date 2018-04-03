@@ -1,5 +1,4 @@
 @extends('layouts.tour')
-
 @section('content')
 
 	<div class="col-sm-8 blog-main">

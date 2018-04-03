@@ -17,9 +17,9 @@
   </head>
 
   <body>
-
+    <header>
       @include ('admin.nav')
-
+    </header>
       <div class="blog-header">
 
         <div class="container">
