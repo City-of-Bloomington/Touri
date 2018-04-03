@@ -8,6 +8,13 @@ body {
   color: #007bff;
 }
 
+p {
+     width: 400px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+
 
 
 /* CUSTOMIZE THE CAROUSEL
