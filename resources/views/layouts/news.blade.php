@@ -29,8 +29,6 @@
     </header>
     <main role="main">
 
-@include ('layouts.carousel')
-
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
@@ -38,19 +36,26 @@
       <div class="container marketing">
 
         <!-- Three columns of text below the carousel -->
-      
-<h1>Featured Tours</h1>
 
-        @yield('content')
+<hr>
+
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">News and Events<span class="text-muted"></span></h2>
+            <p class="lead text-muted">Interest in what the City of Bloomington is up to? Check out the Calendar for upcoming events. </p>
+            <a class="btn btn-primary" href="https://calendar.google.com/calendar/embed?src=bloomington.in.gov_35a6qiaiperdn7b1r6v2ksjlig@group.calendar.google.com&ctz=America/New_York" role="button">Calendar</a>
+          </div>
+          </div>
+        </div>
         <!-- START THE FEATURETTES -->
 
-@include('layouts.features')
         
     
 
 
       <!-- FOOTER -->
-@include('layouts.footer') 
+
 
     </main>
 

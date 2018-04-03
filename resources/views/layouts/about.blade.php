@@ -29,8 +29,6 @@
     </header>
     <main role="main">
 
-@include ('layouts.carousel')
-
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
@@ -38,19 +36,24 @@
       <div class="container marketing">
 
         <!-- Three columns of text below the carousel -->
-      
-<h1>Featured Tours</h1>
+      <hr>
 
-        @yield('content')
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">What is Touri?<span class="text-muted"></span></h2>
+            <p class="lead text-muted">The City is seeking a responsive web application to deliver its archive of tour and point-of-interest (POI) content to Bloomington residents.  The application should convey text and media associated with points of interest and allow users to follow tours (typically walking tours) through the community or to view content through a desktop browser. The application should have an easy to use interface for authoring tours and POIs, and administering the application.</p>
+            <a class="btn btn-primary" href="https://bloomington.in.gov" role="button">City Website</a>
+          </div>
+          </div>
+        </div>
         <!-- START THE FEATURETTES -->
 
-@include('layouts.features')
         
     
 
 
       <!-- FOOTER -->
-@include('layouts.footer') 
+
 
     </main>
 

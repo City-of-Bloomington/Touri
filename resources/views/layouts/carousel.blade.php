@@ -6,7 +6,7 @@
               <div class="carousel-caption text-left">
                 <h1>Touri</h1>
                 <p>A Guided Tour Application</p>
-                <p><a class="btn btn-lg btn-primary" href="listing" role="button">Try it now!</a></p>
+                <p><a class="btn btn-lg btn-primary" href="take_tour" role="button">Try it now!</a></p>
               </div>
             </div>
           </div>

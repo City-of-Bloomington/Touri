@@ -2,13 +2,13 @@
 
 @section ('content')
 
-  <div class="col-sm-8 blog-main">
+	<div class="col-sm-8 blog-main">
 
     <h1>Create Tour Form</h1>
 
-  <hr>
-  <form method="POST" action="/tours">
-    {{ csrf_field() }}
+	<hr>
+	<form method="POST" action="/tours">
+		{{ csrf_field() }}
 
   <div class="form-group">
     <label for="name">Name:</label>

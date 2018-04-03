@@ -1,5 +1,4 @@
 @extends('take_tour.master')
-
 @section('content')
 
  <div class="row">
