@@ -19,4 +19,3 @@ class MapsController extends Controller
 
     	
     }
-}

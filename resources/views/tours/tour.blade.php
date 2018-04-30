@@ -17,7 +17,9 @@
       {{ str_limit($tour->description, 70) }}
      
     </p>
+
     <p><a class="btn btn-primary" href="{{$tour->id}}" role="button">View details &raquo;</a></p>
+
   </div>
 
       <!--

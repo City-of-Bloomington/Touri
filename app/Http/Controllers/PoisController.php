@@ -25,4 +25,4 @@ class PoisController extends Controller
         $poi = Poi::orderBY('sort', 'DESC')->paginate(10);
         return view('layout.show', compact('pois'))->with('no', 1);
     }
-}
+

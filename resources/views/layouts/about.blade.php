@@ -36,7 +36,7 @@
       <div class="container marketing">
 
         <!-- Three columns of text below the carousel -->
-      
+
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">

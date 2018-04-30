@@ -12,6 +12,7 @@
 */
 
 Route::get('/admin', 'ToursController@index');
+
 Route::post('/tours', 'ToursController@store');
 
 // CRUD (Create, Read, Update, Delete) routes
@@ -43,7 +44,6 @@ Route::get('/news', 'TourUsersController@news');
 Route::get('/about', 'TourUsersController@about');
 Route::get('/feedback', 'TourUsersController@feedback');
 
-
 // controller => TourController
 
 // eloquent model => Tour
@@ -51,8 +51,6 @@ Route::get('/feedback', 'TourUsersController@feedback');
 // migration => create_tours_table
 
 // php artisan make:model Tour -mc (does all three)
-
-
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');

@@ -11,8 +11,6 @@
 	      	<p><b>Distance:</b> {{ $tour->total_distance }} mi</p>
 	     	<p><b>Walk time:</b> {{ $tour->walk_time }} min</p>
 
-     	<p><b>Stops:</b></p>
-
 		<div class="pois">
 
 			<ul class="list-group"> 
