@@ -39,6 +39,7 @@
 
         <!-- Three columns of text below the carousel -->
       
+<h1>Featured Tours</h1>
 
         @yield('content')
         <!-- START THE FEATURETTES -->

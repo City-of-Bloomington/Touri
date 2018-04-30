@@ -11,13 +11,13 @@
               <a class="nav-link" href="/take_tour">Tours <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about">About</a>
+              <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="news">News/Events</a>
+              <a class="nav-link" href="/news">News/Events</a>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="feedback">Feedback</a>
+              <a class="nav-link" href="/feedback">Feedback</a>
             </li>
               <li class="nav-item">
               <a class="nav-link disabled" href="/admin">Admin</a>

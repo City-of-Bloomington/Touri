@@ -39,9 +39,4 @@ class TourUsersController extends Controller
         return view('layouts.about');
     }
 
-    public function trivia()
-    {
-        return view('layouts.trivia');
-    }
-
 }

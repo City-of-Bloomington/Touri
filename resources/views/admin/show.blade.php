@@ -32,7 +32,7 @@
 
 				<li class="list-group-item">
 
-					{{ $poi->description }}
+					{{ $poi->name }}
 					
 				</li>
 

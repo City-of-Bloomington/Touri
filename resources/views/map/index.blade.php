@@ -12,8 +12,6 @@
       </div>
 
 
-
-
 @endsection
 
 @section('footer')
