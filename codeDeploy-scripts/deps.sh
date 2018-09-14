@@ -1,7 +1,6 @@
 #!/bin/bash
 
-apt update
-apt -y install apache2 php composer nodejs
+apt-get -y install apache2 php composer nodejs
 a2dissite 000-default
 a2ensite touri.conf
 
