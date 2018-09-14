@@ -24,7 +24,7 @@ os: linux
 #   may cause associated deployments to fail.
 files:
   - source: codeDeploy-scripts/touri.conf
-    destination: /etc/apache2/sites-available/touri.conf
+    destination: /etc/apache2/sites-available/
   - source: /
     destination: /srv/sites/touri/
 
