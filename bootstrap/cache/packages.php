@@ -1,4 +1,15 @@
 <?php return array (
+  'bluevertex/mapbox-api-laravel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'BlueVertex\\MapBoxAPILaravel\\MapBoxAPILaravelServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Mapbox' => 'BlueVertex\\MapBoxAPILaravel\\Facades\\Mapbox',
+    ),
+  ),
   'fideloper/proxy' => 
   array (
     'providers' => 
@@ -18,17 +29,6 @@
     'providers' => 
     array (
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    ),
-  ),
-  'bluevertex/mapbox-api-laravel' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'BlueVertex\\MapBoxAPILaravel\\MapBoxAPILaravelServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Mapbox' => 'BlueVertex\\MapBoxAPILaravel\\Facades\\Mapbox',
     ),
   ),
 );
