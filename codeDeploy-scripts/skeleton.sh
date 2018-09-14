@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Create some empty directories, otherwise composer complains on dependency install
+mkdir -p /srv/sites/touri/public
 cd /srv/sites/touri
 mkdir -p database/seeds
 mkdir -p storage/app/public

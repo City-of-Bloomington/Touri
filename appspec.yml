@@ -23,6 +23,8 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
+  - source: codeDeploy-scripts/touri.conf
+    destination: /etc/apache2/sites-available/touri.conf
   - source: /
     destination: /srv/sites/touri/
 
