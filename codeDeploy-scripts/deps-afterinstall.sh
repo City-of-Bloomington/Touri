@@ -6,3 +6,5 @@ a2ensite touri.conf
 a2enmod rewrite
 composer install
 npm install
+
+chmod -R 777 bootstrap/cache storage
