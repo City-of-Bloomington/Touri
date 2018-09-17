@@ -3,7 +3,7 @@
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">Tours. <span class="text-muted">   Your personal guide.</span></h2>
-            <p class="lead">Hello, this is just the landing page, there isn't much here yet, but there will be in the future!
+            <p class="lead">Testing GitHub Auto-Deployment. Hello, this is just the landing page, there isn't much here yet, but there will be in the future!
       Let's try this link, to see if we can do relative links! </p>
           </div>
           <div class="col-md-5">
