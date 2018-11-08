@@ -3,7 +3,7 @@
     <img class="rounded-circle" src="{{$tour -> img_url}}" width="140" height="140">
     <h2>
 
-        {{ $tour->name }} 
+        {{ $tour->name }}
 
     </h2>
 
@@ -15,9 +15,9 @@
       </p> -->
     <p>
       {{ str_limit($tour->description, 70) }}
-     
+
     </p>
-    <p><a class="btn btn-primary" href="{{$tour->id}}" role="button">View details &raquo;</a></p>
+    <p><a class="btn btn-primary" href="/tours/{{$tour->id}}" role="button">View details &raquo;</a></p>
   </div>
 
       <!--
