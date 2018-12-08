@@ -38,7 +38,33 @@
       <label for="img_url">Image URL</label>
       <input type="url" class="form-control" id="img_url" name="img_url" value="{{$tour->img_url}}">
   </div>
+<div class="pois">
 
+			<ul class="list-group"> 
+
+			@foreach ($tour->pois as $poi)
+
+				<li class="list-group-item">
+				
+				<div class="form-group">
+				{{ csrf_field() }}
+					<label for="description">Stop Description</label>
+					<input type="description" class="form-control" id="description" name="description" value="{{$poi->description}}">
+				</div>
+					<!--<form method="POST" action="/admin/{{ $tour->id }}/{{ $poi->description }}">
+
+					{{ csrf_field() }}
+					<div class="form-group">
+
+						<textarea name="description" placeholder="{{ $poi->description }}" class="form-control"></textarea>
+					</div>-->
+					
+				</li>
+
+			@endforeach
+
+		</ul>
+		</div>
 
   <div class="form-group">
 
