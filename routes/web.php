@@ -23,6 +23,7 @@ Route::delete('/tours/{tour}', 'ToursController@destroy');
 
 // PoI routes
 Route::post('/admin/{tour}/pois', 'PoisController@store');
+Route::get('/admin/{tour}/pois', 'PoisController@edit');
 
 // Route for users
 Route::get('/', 'TourUsersController@index');
