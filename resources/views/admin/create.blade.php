@@ -10,8 +10,11 @@
 	<form method="POST" action="/tours">
 		{{ csrf_field() }}
 
-		
+
 	<head>
+
+<link rel="stylesheet" type="text/css" href="create.blade.css">
+
 	<!-- Function used to create Node Textboxes -->
 		<script type='text/javascript'>
 			<!-- Sets an integer value -->
@@ -19,30 +22,41 @@
 				function AddNode () {
 					<!-- Each button click will add one to the integer value -->
 					integer = integer + 1;
-					
+
 					<!-- Gets nodes value and sets that to the integer -->
-					document.getElementById("nodes").innerText = integer;
-				
+					document.getElementById("nodes1").innerText = integer;
+					document.getElementById("nodes").value = integer;
 					<!-- Adds a description box for a node -->
-					document.getElementById("node_descriptions").innerHTML += 
+					document.getElementById("node_descriptions").innerHTML +=
 					'<div class="form-group">' +
 						'<label for="node_desc">Node ' + integer + '- Description</label>' +
 						'<input type="text" id="node_desc" name="node_desc" class="form-control" value="">' +
+                        '<label for="node_longitude">Node ' + integer + '- Longitude</label>' +
+                        '<input type="text" id="node_longitude" name="node_longitude" class="form-control" value="">' +
+                        '<label for="node_latitude">Node ' + integer + '- Latitude</label>' +
+                        '<input type="text" id="node_latitude" name="node_latitude" class="form-control" value="">' +
+                        '<label for="node_img">Node ' + integer + '- Image</label>' +
+                        '<input type="text" id="node_img" name="node_img" class="form-control" value="">' +
+                        '<label for="node_video">Node ' + integer + '- Video</label>' +
+                        '<input type="text" id="node_video" name="node_video" class="form-control" value="">' +
+                        '<label for="node_audio">Node ' + integer + '- Audio</label>' +
+                        '<input type="file" id="node_audio" name="node_audio" class="form-control" value="">' +
 					'</div>';
-					
+
 					<!-- IMPORTANT NOTE!!!: the 'value' for the input variable above^^ needs to be changed! -->
 					<!-- Currently the value is empty "" -->
 				}
+
 		</script>
 	</head>
-  
-	
+
+<p class = "hide-element">This is a test</p>
   <!-- Tour Name -->
   <div class="form-group">
     <label for="name">Name of Tour:</label>
     <input type="text" class="form-control" id="name" name="name">
   </div>
-  
+
   <!-- Tour Description -->
   <div class="form-group">
     <label for="description">Tour Description:</label>
@@ -51,12 +65,14 @@
 
   <!-- Tour Nodes -->
   <div class="form-group">
-	<label for="nodes">Number of nodes for this tour:</label>
-	<text id="nodes">0</text>
+	<label for="nodes1">Number of nodes for this tour:</label>
+	<text id="nodes1">0</text>
+	<input type="text" class="form-control" id="nodes" name="nodes" value=0>
 		<br>
 	<button type="button" class="btn btn-primary" onclick="AddNode()">Add Node</button>
   </div>
-  
+
+
   <!-- Node Description Creation -->
 	  <!-- NEW NODE CREATION !!! -->
 	  <div class="form-group" id="node_descriptions">
@@ -84,8 +100,8 @@
   <div class='form-group'>
     <button type="submit" class="btn btn-primary">Submit</button>
   </div>
-  
- 
+
+
     @include ('layouts.errors')
 </div>
 
