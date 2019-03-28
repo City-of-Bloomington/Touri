@@ -24,7 +24,8 @@
   </script>
 		<div class="col-sm-8 blog-main">
 		<div class='form-group'>
-		<h1>{{ $tour-> name }}
+            <h1>{{ $tour-> name }}</h1>
+            
 			<br class="clearFloat">
 			
 			<!-- Edit Tour Table -->
@@ -36,20 +37,17 @@
 				<input name="_method" type="hidden" value="DELETE">
 				<button class="btn btn-danger" type="submit" style="float: right;">Delete</button>
 			</form>
-		</a><br></h1><hr>
+		<br><hr>
 		</div>
-
+        
 		<p class="blog-post-meta"></p>
 			<b>Description:</b> {{ $tour->description }} <p>
 	      	<p><b>Number of Nodes:</b> {{ $tour->nodes }}</p>
 	      	<p><b>Distance:</b> {{ $tour->total_distance }} mi</p>
 	     	<p><b>Walk time:</b> {{ $tour->walk_time }} min</p>
 
-     	<p><b>Stops:</b></p>
-
-		<div class="pois">
-
-			<ul class="list-group"> 
+     	  <p><b>Stops:</b>  </p>
+         
 
 		<div class="pois">
 

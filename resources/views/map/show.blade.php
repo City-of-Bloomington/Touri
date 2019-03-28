@@ -18,7 +18,7 @@
 
 		<br>
 
-     	<p style="color: #737373"><b>Tour Stops</b></p>
+     	<p style="color: #737373"><b>Tour Stop</b></p>
 
 		<div class="pois">
 			<ul class="list-group"> 

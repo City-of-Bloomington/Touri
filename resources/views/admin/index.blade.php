@@ -9,6 +9,10 @@
             @include('admin.tour')
 
           @endforeach
+        
+          @foreach ($stops as $stop)
+            @include('admin.stop')
+          @endforeach
 
         </div>
 

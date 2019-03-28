@@ -24,10 +24,21 @@
 					document.getElementById("nodes").innerText = integer;
 				
 					<!-- Adds a description box for a node -->
+                    <!-- Made a change -->
 					document.getElementById("node_descriptions").innerHTML += 
 					'<div class="form-group">' +
 						'<label for="node_desc">Node ' + integer + '- Description</label>' +
 						'<input type="text" id="node_desc" name="node_desc" class="form-control" value="">' +
+                        '<label for="node_longitude">Node ' + integer + '- Longitude</label>' +
+                        '<input type="text" id="node_longitude" name="node_longitude" class="form-control" value="">' +
+                        '<label for="node_latitude">Node ' + integer + '- Latitude</label>' +
+                        '<input type="text" id="node_latitude" name="node_latitude" class="form-control" value="">' +
+                        '<label for="node_img">Node ' + integer + '- Image</label>' +
+                        '<input type="text" id="node_img" name="node_img" class="form-control" value="">' +
+                        '<label for="node_video">Node ' + integer + '- Video</label>' +
+                        '<input type="text" id="node_video" name="node_video" class="form-control" value="">' +
+                        '<label for="node_audio">Node ' + integer + '- Audio</label>' +
+                        '<input type="file" id="node_audio" name="node_audio" class="form-control" value="">' +
 					'</div>';
 					
 					<!-- IMPORTANT NOTE!!!: the 'value' for the input variable above^^ needs to be changed! -->
@@ -61,7 +72,7 @@
 	  <!-- NEW NODE CREATION !!! -->
 	  <div class="form-group" id="node_descriptions">
 	  </div>
-
+        
   <!-- Tour Distance -->
   <div class="form-group">
       <label for="total_distance">What is the distance of the tour? (in miles)</label>
@@ -75,6 +86,7 @@
   </div>
 
   <!-- Tour Image -->
+<!--Made a change-->
   <div class="form-group">
       <label for="img_url">Provide an Image URL for the Tour:</label>
       <input type="url" class="form-control" id="img_url" name="img_url">
@@ -87,8 +99,8 @@
   
  
     @include ('layouts.errors')
+        </form>
 </div>
 
 
-</form>
 @endsection
