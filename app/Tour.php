@@ -7,7 +7,7 @@ class Tour extends Model
 {
     public function pois()
     {
-    	return $this->belongsToMany(Poi::class);
+    	return $this->hasMany(Poi::class);
     }
 
     public function addPoi($description)

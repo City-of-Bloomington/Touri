@@ -47,8 +47,13 @@
 	     	<p><b>Walk time:</b> {{ $tour->walk_time }} min</p>
 
      	  <p><b>Stops:</b>  </p>
-         
-
+          <ul>
+            @foreach ($tour->pois as $poi) 
+                <li>{{ $poi->lat}}</li>
+                
+            @endforeach  
+          </ul>
+            
 		<div class="pois">
 
 			<ul class="list-group"> 

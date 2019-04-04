@@ -13,6 +13,7 @@
 
 Route::get('/admin', 'ToursController@index');
 Route::post('/tours', 'ToursController@store');
+
 Route::resource('stops','StopsController');
 
 // CRUD (Create, Read, Update, Delete) routes
