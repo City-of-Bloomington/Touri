@@ -1,13 +1,11 @@
 <?php
-
 namespace App;
-
-
+use Illuminate\Database\Eloquent\Model;
 class Poi extends Model
 {
     //$poi->tour;
-    public function tour()
+    public function tours()
     {
-    	return $this->belongsTo(Tour::class);
+    	return $this->belongsToMany('Tour','Stop');
     }
 }

@@ -5,13 +5,15 @@
 		<div class='form-group'>
 		<h1>{{ $tour-> name }}
 			<br class="clearFloat">
+            
 			<a class="btn btn-small btn-secondary" href="{{ URL::to('/admin/'.$tour->id.'/edit') }}" style="float: right;">Edit this Tour</a>
 			<form action="{{action('ToursController@destroy', $tour->id)}}" method="post">
 				{{csrf_field()}}
 				<input name="_method" type="hidden" value="DELETE">
 				<button class="btn btn-danger" type="submit" style="float: right;">Delete</button>
 			</form>
-		</a><br></h1><hr>
+            
+		<br></h1><hr>
 		</div>
 
 		<p class="blog-post-meta">

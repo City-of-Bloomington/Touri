@@ -10,11 +10,8 @@
 	<form method="POST" action="/tours">
 		{{ csrf_field() }}
 
-
+		
 	<head>
-
-<link rel="stylesheet" type="text/css" href="create.blade.css">
-
 	<!-- Function used to create Node Textboxes -->
 		<script type='text/javascript'>
 			<!-- Sets an integer value -->
@@ -22,12 +19,13 @@
 				function AddNode () {
 					<!-- Each button click will add one to the integer value -->
 					integer = integer + 1;
-
+					
 					<!-- Gets nodes value and sets that to the integer -->
-					document.getElementById("nodes1").innerText = integer;
-					document.getElementById("nodes").value = integer;
+					document.getElementById("nodes").innerText = integer;
+				
 					<!-- Adds a description box for a node -->
-					document.getElementById("node_descriptions").innerHTML +=
+                    <!-- Made a change -->
+					document.getElementById("node_descriptions").innerHTML += 
 					'<div class="form-group">' +
 						'<label for="node_desc">Node ' + integer + '- Description</label>' +
 						'<input type="text" id="node_desc" name="node_desc" class="form-control" value="">' +
@@ -42,21 +40,20 @@
                         '<label for="node_audio">Node ' + integer + '- Audio</label>' +
                         '<input type="file" id="node_audio" name="node_audio" class="form-control" value="">' +
 					'</div>';
-
+					
 					<!-- IMPORTANT NOTE!!!: the 'value' for the input variable above^^ needs to be changed! -->
 					<!-- Currently the value is empty "" -->
 				}
-
 		</script>
 	</head>
-
-<p class = "hide-element">This is a test</p>
+  
+	
   <!-- Tour Name -->
   <div class="form-group">
     <label for="name">Name of Tour:</label>
     <input type="text" class="form-control" id="name" name="name">
   </div>
-
+  
   <!-- Tour Description -->
   <div class="form-group">
     <label for="description">Tour Description:</label>
@@ -65,19 +62,17 @@
 
   <!-- Tour Nodes -->
   <div class="form-group">
-	<label for="nodes1">Number of nodes for this tour:</label>
-	<text id="nodes1">0</text>
-	<input type="text" class="form-control" id="nodes" name="nodes" value=0>
+	<label for="nodes">Number of nodes for this tour:</label>
+	<text id="nodes">0</text>
 		<br>
 	<button type="button" class="btn btn-primary" onclick="AddNode()">Add Node</button>
   </div>
-
-
+  
   <!-- Node Description Creation -->
 	  <!-- NEW NODE CREATION !!! -->
 	  <div class="form-group" id="node_descriptions">
 	  </div>
-
+        
   <!-- Tour Distance -->
   <div class="form-group">
       <label for="total_distance">What is the distance of the tour? (in miles)</label>
@@ -91,6 +86,7 @@
   </div>
 
   <!-- Tour Image -->
+<!--Made a change-->
   <div class="form-group">
       <label for="img_url">Provide an Image URL for the Tour:</label>
       <input type="url" class="form-control" id="img_url" name="img_url">
@@ -100,11 +96,11 @@
   <div class='form-group'>
     <button type="submit" class="btn btn-primary">Submit</button>
   </div>
-
-
+  
+ 
     @include ('layouts.errors')
+        </form>
 </div>
 
 
-</form>
 @endsection

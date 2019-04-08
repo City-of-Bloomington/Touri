@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateToursTable extends Migration
+class CreateStopsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateToursTable extends Migration
      */
     public function up()
     {
-        Schema::create('tours', function (Blueprint $table) {
+        Schema::create('stops', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 50);
-            $table->text('description', 255);
-            $table->text('nodes', 10);
-            $table->decimal('total_distance', 4, 2);
-            $table->decimal('walk_time', 4, 2);
+            $table->integer('tour_id');
+            $table->integer('pois_id');
+            $table->mediumText('description');
+            $table->string('audio');
+            $table->mediumText('vid');
+            $table->mediumText('img');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateToursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tours');
+        Schema::dropIfExists('stops');
     }
 }
