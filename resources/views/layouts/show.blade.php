@@ -2,15 +2,12 @@
 @section('content')
 
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
 
     <main role="main">
   <div id='map' style='width: auto; height: 300px;'></div>
   <script>
-  /* Original script/css tags, took 'i' out of script so it would comment out.*/
-  /*<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></scrpt>
-      <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />*/
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiZWRyd2luOTYiLCJhIjoiY2oxZTRjem5zMDAwMjMzbzV3anh0MTBrNCJ9.ItTuwAZyoOY5yBcFyx0HCQ';
     var map = new mapboxgl.Map({
@@ -25,17 +22,34 @@
     },
     trackUserLocation: true
   }));
-  /*mapboxgl.accessToken = 'pk.eyJ1IjoianVsZGlldHIiLCJhIjoiY2p0eGU3dnZlMHhjODQzcGcydzh1bWtzdSJ9.4dpg56GQonHEJ97jbu2yDg'; // replace this with your access token
-   var map = new mapboxgl.Map({
-     container: 'map',
-     style: 'mapbox://styles/mapbox/streets-v10',//'mapbox://styles/juldietr/cjtxedc0y2r2f1fnrnesk1hzr', // replace this with your style URL
-     center: [-87.661557, 41.893748],
-     zoom: 10.7
-   });*/
 
    map.on('load', () => {
 
-     map.addSource('pointsSource', {
+     @foreach ($tour->pois as $poi)
+       map.addSource('pointsSource', {
+         type: 'geojson',
+         data: {
+         'features': [
+         {
+          'type': 'Feature',
+          'properties': {
+            'title': '$poi->name',
+            'description': '$poi->description'
+          },
+          'geometry': {
+            'coordinates': [
+              -87.769775,
+              41.873683
+            ],
+            'type': 'Point'
+          }
+         }
+         ],
+         'type': 'FeatureCollection'
+         }
+       });
+     @endforeach
+     /*map.addSource('pointsSource', {
        type: 'geojson',
        data: {
        'features': [
@@ -168,7 +182,7 @@
        ],
        'type': 'FeatureCollection'
        }
-       });
+     });*/
    map.addLayer({
      id: 'points',
      source: 'pointsSource',
@@ -191,34 +205,22 @@
       .addTo(map);
     }
   });
-
-  /*map.on('click', e => {
-    console.log('click', e.lngLat);
-  });*/
-
-   /*map.on('click', function(e) {
-  var features = map.queryRenderedFeatures(e.point, {
-    layers: ['chicago-parks'] // replace this with the name of the layer
-  });
-
-  if (!features.length) {
-    return;
-  }
-
-  var feature = features[0];
-
-  var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-    .setLngLat(feature.geometry.coordinates)
-    .addTo(map);
-});*/
   </script>
 		<div class="col-sm-8 blog-main">
 		<div class='form-group'>
 		<h1>{{ $tour-> name }}
 			<br class="clearFloat">
-		<br></h1><hr>
+
+			<!-- Edit Tour Table -->
+			<a class="btn btn-small btn-secondary" href="{{ URL::to('/admin/'.$tour->id.'/edit') }}" style="float: right;">Edit this Tour</a>
+
+
+			<form action="{{action('ToursController@destroy', $tour->id)}}" method="post">
+				{{csrf_field()}}
+				<input name="_method" type="hidden" value="DELETE">
+				<button class="btn btn-danger" type="submit" style="float: right;">Delete</button>
+			</form>
+		</a><br></h1><hr>
 		</div>
 
 		<p class="blog-post-meta"></p>
