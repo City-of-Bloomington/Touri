@@ -2,15 +2,12 @@
 @section('content')
 
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
 
     <main role="main">
   <div id='map' style='width: auto; height: 300px;'></div>
   <script>
-  /* Original script/css tags, took 'i' out of script so it would comment out.*/
-  /*<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></scrpt>
-      <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />*/
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiZWRyd2luOTYiLCJhIjoiY2oxZTRjem5zMDAwMjMzbzV3anh0MTBrNCJ9.ItTuwAZyoOY5yBcFyx0HCQ';
     var map = new mapboxgl.Map({
@@ -25,13 +22,6 @@
     },
     trackUserLocation: true
   }));
-  /*mapboxgl.accessToken = 'pk.eyJ1IjoianVsZGlldHIiLCJhIjoiY2p0eGU3dnZlMHhjODQzcGcydzh1bWtzdSJ9.4dpg56GQonHEJ97jbu2yDg'; // replace this with your access token
-   var map = new mapboxgl.Map({
-     container: 'map',
-     style: 'mapbox://styles/mapbox/streets-v10',//'mapbox://styles/juldietr/cjtxedc0y2r2f1fnrnesk1hzr', // replace this with your style URL
-     center: [-87.661557, 41.893748],
-     zoom: 10.7
-   });*/
 
    map.on('load', () => {
 
