@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use Illuminate\Database\Eloquent\Model;
 
 class Tour extends Model
 {
@@ -18,8 +18,13 @@ class Tour extends Model
 
     		'description' => $description,
     		'tour_id' => $this->id
-
+    
     	]);*/
+    }
+    
+    public function stops()
+    {
+        return $this->hasMany(Stop::class);
     }
 }
 

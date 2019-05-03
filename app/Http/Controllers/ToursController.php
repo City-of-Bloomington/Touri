@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Tour;
 use App\Poi;
+use App\Stop;
 
 class ToursController extends Controller
 {
@@ -44,10 +45,13 @@ class ToursController extends Controller
 
             'name' => 'required',
             'description' => 'required',
-            'nodes' => 'required',
             'total_distance' => 'required',
             'walk_time' => 'required',
-            'img_url' => 'required'
+            'img_url' => 'required',
+            'node_desc' => 'required',
+            'node_audio' => 'required',
+            'node_video' => 'required',
+            'node_img' => 'required'
 
         ]);
 
@@ -60,7 +64,27 @@ class ToursController extends Controller
     	//Save it to the database
     	//$blog->save();
 
-    	Tour::create(request(['name', 'description','nodes','total_distance','walk_time']));
+
+        $tour = new Tour;
+
+        $tour->name = request('name');
+        $tour->description = request('description');
+        $tour->total_distance = request('total_distance');
+        $tour->walk_time = request('walk_time');
+        $tour->img = request('img_url');
+        $tour->save();
+
+        $stop = new Stop;
+
+        $stop->tour_id = $tour->id;
+        $stop->pois_id = 1;
+        $stop->description = request('node_desc');
+        $stop->audio = request('node_audio');
+        $stop->vid = request('node_video');
+        $stop->img = request('node_img');
+        $stop->save();
+
+    	//old: Tour::create(request(['name', 'description','nodes','total_distance','walk_time']));
 
 
     	//And then redirect to the home page
@@ -79,7 +103,7 @@ class ToursController extends Controller
             'img_url' => 'required'
 
         ]);
-        
+
         $tour = Tour::find($id);
         $tour->name = $request->input('name');
         $tour->description = $request->input('description');
